@@ -1,0 +1,5 @@
+module.exports =
+{
+    "URI": "mongodb+srv://prasiddha12:uphjKAugr5FmOhYR@cluster0.ajflt9y.mongodb.net/?retryWrites=true&w=majority",
+    "Secret": 'SomeSecret'
+}

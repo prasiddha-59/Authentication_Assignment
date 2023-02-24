@@ -1,0 +1,42 @@
+
+<%- include ../partials/header.ejs %>
+
+    <%- include ../partials/main_nav.ejs %>
+        <main class="text-center">
+            <table class="table mt-5">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col" colspan="3">Actions</th>
+                </tr>
+                <% for(let count=0; count < contactList.length; count++) { %>
+
+
+                    <tr>
+                        <th scope="row">
+                            <%= count+1%>
+                        </th>
+                        <td>
+                            <%= contactList[count].name %>
+                        </td>
+                        <td>
+                            <%= contactList[count].email %>
+                        </td>
+                        <td>
+                            <%= contactList[count].contactNumber %>
+                        </td>
+                        <td>
+                            <a href="/business/add" class="btn btn-primary btn-sm">
+                                </i> Add</a>
+                            <a href="/business/edit/<%= contactList[count]._id %>" class="btn btn-warning btn-sm">
+                                </i> Edit</a>
+                            <a href="/business/delete/<%= contactList[count]._id %>" class="btn btn-danger btn-sm">
+                                </i> Delete</a>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+        </main>
+        <%- include ../partials/footer.ejs %>

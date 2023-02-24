@@ -1,0 +1,24 @@
+<!-- navigation bar-->
+
+<header class="navigation">
+    <div class="navigation_container">
+        <nav>
+            <div class="home_icon">
+                <img height="80px" width="80px" style=border-radius:20px src="assets/images/logo.png" alt="Italian Trulli">
+            </div>
+            <ul class="nav_links">
+                <li class=" <%= page=='Home' ? 'active' : '' %>"><a href="/home">Home</a></li>
+                <li class=" <%= page=='Projects' ? ' active' : '' %>"><a href="/projects">Projects</a></li>
+                <li class=" <%= page=='Services' ? 'active' : '' %>"><a href="/services">Services</a></li>
+                <li class=" <%= page=='About Me' ? ' active' : '' %>"><a href="/about-me">About Me</a></li>
+                <li class=" <%= page=='Contact Me' ? 'active' : '' %>"><a href="/contact-me">Contact Me</a></li>
+                <li class=" <%= page=='Login' ? 'active' : '' %>"><a href="/login">Login</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </div>
+</header>

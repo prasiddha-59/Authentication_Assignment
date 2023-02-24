@@ -1,0 +1,43 @@
+<%- include ../partials/header.ejs %>
+
+    <%- include ../partials/main_nav.ejs %>
+        <div class="text-left mt-5">
+            <div class="row">
+                <div class="">
+                    <h1>
+                        <%= page %>
+                    </h1>
+
+                    <form class="form mt-3" method="POST">
+                        <div class="form-group">
+                            <label for="nameTextField">Contact</label>
+                            <input type="text" class="form-control" id="nameTextField"
+                                placeholder="Enter the Business Name" name="name" required
+                                value="<%= contactList.name %> ">
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="authorTextField">Email</label>
+                            <input type="text" class="form-control" id="authorTextField"
+                                placeholder="Enter the Business email" name="email" value="<%= contactList.email %> "
+                                required>
+                        </div>
+
+                        <div class="form-group mt-3 mb-3">
+                            <label for="publishedTextField">Contact Number</label>
+                            <input type="text" class="form-control" id="publishedTextField"
+                                placeholder="Enter the Contact Number" name="contactNumber"
+                                value="<%= contactList.contactNumber %> " required>
+                        </div>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fas fa-edit"></i> Submit</button>
+
+                        <a href="/business" class="btn btn-warning">
+                            <i class="fas fa-undo"></i> Cancel</a>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <%- include ../partials/footer.ejs %>
